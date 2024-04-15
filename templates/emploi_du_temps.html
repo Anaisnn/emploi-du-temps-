@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Choix des matières pour l'UFR SSA et SEGMI</title>
+</head>
+<body>
+	<h2>Choisissez votre statut :</h2>
+	<form action="#" method="post" id="formStatut">
+    	<label for="statut">Statut :</label>
+    	<select name="statut" id="statut">
+        	<option value="">Choisissez votre statut</option>
+        	<option value="professeur">Professeur</option>
+        	<option value="etudiant">Étudiant</option>
+        	<option value="particulier">Particulier</option>
+    	</select>
+    	<br><br>
+    	<input type="submit" value="Valider mon statut">
+	</form>
+
+
+	<!-- Div pour afficher les options spécifiques aux professeurs -->
+	<!-- Div pour afficher les options spécifiques aux professeurs -->
+<div id="optionsProfesseur" style="display: none;">
+	<h2>Informations personnelles :</h2>
+	<form action="#" method="post" id="formProfesseur">
+    	<label for="nom">Nom :</label>
+    	<input type="text" id="nom" name="nom"><br><br>
+    	<label for="numero_universite">Numéro rattaché à l'université :</label>
+    	<input type="text" id="numero_universite" name="numero_universite"><br><br>
+    	<label for="heures_cours">Combien d'heures de cours souhaitez-vous donner par semaine ?</label>
+    	<input type="number" id="heures_cours" name="heures_cours" min="1" max="35"><br><br>
+    	<input type="submit" value="Valider">
+
+
+	</form>
+	<!-- Ajout du tableau pour choisir les horaires -->
+	<div id="tableauHoraires" style="display: none;">
+    	<h2>Choisissez vos jours et vos heures de cours :</h2>
+    	<table border="1">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th>Lundi</th>
+                	<th>Mardi</th>
+                	<th>Mercredi</th>
+                	<th>Jeudi</th>
+                	<th>Vendredi</th>
+            	</tr>
+        	</thead>
+        	<tbody>
+            	<tr>
+                	<td>8h - 10h</td>
+                	<td><input type="checkbox" id="prof_lundi_8_10" name="prof_horaire" value="lundi_8_10"></td>
+                	<td><input type="checkbox" id="prof_mardi_8_10" name="prof_horaire" value="mardi_8_10"></td>
+                	<td><input type="checkbox" id="prof_mercredi_8_10" name="prof_horaire" value="mercredi_8_10"></td>
+                	<td><input type="checkbox" id="prof_jeudi_8_10" name="prof_horaire" value="jeudi_8_10"></td>
+                	<td><input type="checkbox" id="prof_vendredi_8_10" name="prof_horaire" value="vendredi_8_10"></td>
+            	</tr>
+            	<tr>
+
+                	<td>10h - 12h</td>
+                	<td><input type="checkbox" id="lundi_10_12" name="horaire" value="lundi_10_12"></td>
+                	<td><input type="checkbox" id="mardi_10_12" name="horaire" value="mardi_10_12"></td>
+                	<td><input type="checkbox" id="mercredi_10_12" name="horaire" value="mercredi_10_12"></td>
+                	<td><input type="checkbox" id="jeudi_10_12" name="horaire" value="jeudi_10_12"></td>
+                	<td><input type="checkbox" id="vendredi_10_12" name="horaire" value="vendredi_10_12"></td>
+            	</tr>
+
+            	<tr>
+                	<td>12h - 13h (déjeuner)</td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+            	</tr>
+            	<tr>
+
+                	<td>13h - 15h</td>
+                	<td><input type="checkbox" id="lundi_13_15" name="horaire" value="lundi_13_15"></td>
+                	<td><input type="checkbox" id="mardi_13_15" name="horaire" value="mardi_13_15"></td>
+                	<td><input type="checkbox" id="mercredi_13_15" name="horaire" value="mercredi_13_15"></td>
+                	<td><input type="checkbox" id="jeudi_13_15" name="horaire" value="jeudi_13_15"></td>
+                	<td><input type="checkbox" id="vendredi_13_15" name="horaire" value="vendredi_13_15"></td>
+            	</tr>
+            	<tr>
+                	<td>15h - 17h</td>
+                	<td><input type="checkbox" id="lundi_15_17" name="horaire" value="lundi_15_17"></td>
+                	<td><input type="checkbox" id="mardi_15_17" name="horaire" value="mardi_15_17"></td>
+                	<td><input type="checkbox" id="mercredi_15_17" name="horaire" value="mercredi_15_17"></td>
+                	<td><input type="checkbox" id="jeudi_15_17" name="horaire" value="jeudi_15_17"></td>
+                	<td><input type="checkbox" id="vendredi_15_17" name="horaire" value="vendredi_15_17"></td>
+            	</tr>
+            	<tr>
+                	<td>17h - 19h</td>
+                	<td><input type="checkbox" id="lundi_17_19" name="horaire" value="lundi_17_19"></td>
+                	<td><input type="checkbox" id="mardi_17_19" name="horaire" value="mardi_17_19"></td>
+                	<td><input type="checkbox" id="mercredi_17_19" name="horaire" value="mercredi_17_19"></td>
+                	<td><input type="checkbox" id="jeudi_17_19" name="horaire" value="jeudi_17_19"></td>
+                	<td><input type="checkbox" id="vendredi_17_19" name="horaire" value="vendredi_17_19"></td>
+            	</tr> <!-- Ajoutez d'autres lignes pour les autres tranches horaires -->
+        	</tbody>
+    	</table>
+    	<br><br>
+    	<input type="submit" value="Valider les horaires">
+	</div>
+</div>
+
+
+
+
+
+
+	<!-- Div pour afficher les options spécifiques aux étudiants -->
+	<div id="optionsEtudiant" style="display: none;">
+    	<h2>Choisissez votre UFR :</h2>
+    	<form action="#" method="post" id="formUFR">
+        	<label for="ufr">UFR :</label>
+        	<select name="ufr" id="ufr">
+            	<option value="">Choisissez votre UFR</option>
+            	<option value="LCE">LCE</option>
+            	<option value="PHILIA">PHILIA</option>
+            	<option value="SSA">SSA</option>
+            	<option value="SEGMI">SEGMI</option>
+            	<option value="SITEC">SITEC</option>
+            	<option value="SPSE">SPSE</option>
+            	<option value="DSP">DSP</option>
+            	<option value="STAPS">STAPS</option>
+        	</select>
+        	<br><br>
+        	<h2>Choisissez votre niveau :</h2>
+        	<label for="niveau">Niveau :</label>
+        	<select name="niveau" id="niveau">
+            	<option value="">Choisissez votre niveau</option>
+            	<option value="L1">L1</option>
+            	<option value="L2">L2</option>
+            	<option value="L3">L3</option>
+        	</select>
+        	<br><br>
+        	<h2>Combien de matières souhaitez-vous avoir ? (entre 3 et 8) :</h2>
+        	<input type="number" id="nombreMatieres" name="nombreMatieres" min="3" max="8">
+        	<br><br>
+        	<input type="submit" value="Valider">
+    	</form>
+	</div>
+
+	<!-- Div pour afficher le choix des matières -->
+	<div id="formMatieres" style="display: none;">
+    	<h2>Choisissez vos matières :</h2>
+    	<form action="#" method="post" id="formMatieresChoix">
+        	<!-- Les matières pour l'UFR SSA -->
+        	<div id="matieresSSA" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR SSA -->
+            	<input type="checkbox" id="anthropologie" name="matieres" value="anthropologie">
+            	<label for="anthropologie">Anthropologie</label><br>
+            	<input type="checkbox" id="geographie" name="matieres" value="geographie">
+            	<label for="geographie">Géographie</label><br>
+            	<input type="checkbox" id="histoire" name="matieres" value="histoire">
+            	<label for="histoire">Histoire</label><br>
+            	<input type="checkbox" id="histoire_art_archeologie" name="matieres" value="histoire_art_archeologie">
+            	<label for="histoire_art_archeologie">Histoire de l'art / Archéologie</label><br>
+            	<input type="checkbox" id="sociologie" name="matieres" value="sociologie">
+            	<label for="sociologie">Sociologie</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR SEGMI -->
+        	<div id="matieresSEGMI" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR SEGMI -->
+            	<input type="checkbox" id="economie" name="matieres" value="economie">
+            	<label for="economie">Économie</label><br>
+            	<input type="checkbox" id="mathematiques" name="matieres" value="mathematiques">
+            	<label for="mathematiques">Mathématiques</label><br>
+            	<input type="checkbox" id="sciences_gestion" name="matieres" value="sciences_gestion">
+            	<label for="sciences_gestion">Sciences de Gestion</label><br>
+            	<input type="checkbox" id="informatique" name="matieres" value="informatique">
+            	<label for="informatique">Informatique</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR DSP -->
+        	<div id="matieresDSP" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR DSP -->
+            	<input type="checkbox" id="droit_prive" name="matieres" value="droit_prive">
+            	<label for="droit_prive">Droit privé</label><br>
+            	<input type="checkbox" id="droit_public" name="matieres" value="droit_public">
+            	<label for="droit_public">Droit public</label><br>
+            	<input type="checkbox" id="histoire_droit" name="matieres" value="histoire_droit">
+            	<label for="histoire_droit">Histoire du droit</label><br>
+            	<input type="checkbox" id="science_politique" name="matieres" value="science_politique">
+            	<label for="science_politique">Science politique</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR SPSE -->
+        	<div id="matieresSPSE" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR SPSE -->
+            	<input type="checkbox" id="psychologie_cognitive" name="matieres" value="psychologie_cognitive">
+            	<label for="psychologie_cognitive">Psychologie cognitive</label><br>
+            	<input type="checkbox" id="psychologie_developpement" name="matieres" value="psychologie_developpement">
+            	<label for="psychologie_developpement">Psychologie du développement</label><br>
+            	<input type="checkbox" id="psychologie_travail" name="matieres" value="psychologie_travail">
+            	<label for="psychologie_travail">Psychologie du travail</label><br>
+            	<input type="checkbox" id="psychopathologie" name="matieres" value="psychopathologie">
+            	<label for="psychopathologie">Psychopathologie et Psychologie Clinique empirique et TCC</label><br>
+            	<input type="checkbox" id="psychopathologie_clinique" name="matieres" value="psychopathologie_clinique">
+            	<label for="psychopathologie_clinique">Psychopathologie clinique psychanalytique</label><br>
+            	<input type="checkbox" id="psychologie_sociale" name="matieres" value="psychologie_sociale">
+            	<label for="psychologie_sociale">Psychologie sociale</label><br>
+            	<input type="checkbox" id="psychophysiologie" name="matieres" value="psychophysiologie">
+            	<label for="psychophysiologie">Psychophysiologie</label><br>
+            	<input type="checkbox" id="anglais" name="matieres" value="anglais">
+            	<label for="anglais">Anglais</label><br>
+            	<input type="checkbox" id="mathematiques" name="matieres" value="mathematiques">
+            	<label for="mathematiques">Mathématiques</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR LCE -->
+        	<div id="matieresLCE" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR LCE -->
+            	<input type="checkbox" id="allemand" name="matieres" value="allemand">
+            	<label for="allemand">Allemand</label><br>
+            	<input type="checkbox" id="italien" name="matieres" value="italien">
+            	<label for="italien">Italien</label><br>
+            	<input type="checkbox" id="portugais" name="matieres" value="portugais">
+            	<label for="portugais">Portugais</label><br>
+            	<input type="checkbox" id="slaves" name="matieres" value="slaves">
+            	<label for="slaves">Slaves</label><br>
+            	<input type="checkbox" id="anglais_lce" name="matieres" value="anglais_lce">
+            	<label for="anglais_lce">Anglais</label><br>
+            	<input type="checkbox" id="espagnol" name="matieres" value="espagnol">
+            	<label for="espagnol">Espagnol</label><br>
+            	<input type="checkbox" id="lea" name="matieres" value="lea">
+            	<label for="lea">Langues étrangères appliquées (LEA)</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR PHILIA -->
+        	<div id="matieresPHILIA" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR PHILIA -->
+            	<input type="checkbox" id="arts_spectacle" name="matieres" value="arts_spectacle">
+            	<label for="arts_spectacle">Arts du spectacle</label><br>
+            	<input type="checkbox" id="langues_litteratures_grecques_latines" name="matieres" value="langues_litteratures_grecques_latines">
+            	<label for="langues_litteratures_grecques_latines">Langues et littératures grecques et latines</label><br>
+            	<input type="checkbox" id="lettres_modernes" name="matieres" value="lettres_modernes">
+            	<label for="lettres_modernes">Lettres modernes</label><br>
+            	<input type="checkbox" id="philosophie" name="matieres" value="philosophie">
+            	<label for="philosophie">Philosophie</label><br>
+            	<input type="checkbox" id="sciences_information_communication" name="matieres" value="sciences_information_communication">
+            	<label for="sciences_information_communication">Sciences de l'information et de la communication</label><br>
+            	<input type="checkbox" id="sciences_langage" name="matieres" value="sciences_langage">
+            	<label for="sciences_langage">Sciences du langage</label><br>
+            	<input type="checkbox" id="fete" name="matieres" value="fete">
+            	<label for="fete">FETE (Français pour étudiants étrangers)</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+
+        	<!-- Les matières pour l'UFR SITEC -->
+        	<div id="matieresSITEC" style="display: none;">
+            	<!-- Les matières spécifiques à l'UFR SITEC -->
+            	<input type="checkbox" id="anglais_sitec" name="matieres" value="anglais_sitec">
+            	<label for="anglais_sitec">Anglais</label><br>
+            	<input type="checkbox" id="electronique" name="matieres" value="electronique">
+            	<label for="electronique">Électronique</label><br>
+            	<input type="checkbox" id="energetique" name="matieres" value="energetique">
+            	<label for="energetique">Énergétique</label><br>
+            	<input type="checkbox" id="science_information_communication" name="matieres" value="science_information_communication">
+            	<label for="science_information_communication">Science de l'information et de la communication</label><br>
+            	<input type="checkbox" id="mecanique" name="matieres" value="mecanique">
+            	<label for="mecanique">Mécanique</label><br>
+            	<input type="checkbox" id="traitement_signal" name="matieres" value="traitement_signal">
+            	<label for="traitement_signal">Traitement du signal</label><br>
+            	<input type="checkbox" id="mathematiques_sitec" name="matieres" value="mathematiques_sitec">
+            	<label for="mathematiques_sitec">Mathématiques</label><br>
+            	<input type="checkbox" id="thermique_energetique" name="matieres" value="thermique_energetique">
+            	<label for="thermique_energetique">Thermique-Énergétique</label><br>
+            	<input type="checkbox" id="sociologie_demographie" name="matieres" value="sociologie_demographie">
+            	<label for="sociologie_demographie">Sociologie et démographie</label><br>
+            	<input type="checkbox" id="sociologie" name="matieres" value="sociologie">
+            	<label for="sociologie">Sociologie</label><br>
+            	<br>
+            	<input type="submit" value="Valider les matières">
+        	</div>
+    	</form>
+	</div>
+
+	<!-- Div pour afficher les options d'horaire -->
+	<div id="optionsHoraire" style="display: none;">
+    	<h2>Choisissez vos jours et vos heures de cours :</h2>
+    	<table border="1">
+        	<thead>
+            	<tr>
+                	<th></th>
+                	<th>Lundi</th>
+                	<th>Mardi</th>
+                	<th>Mercredi</th>
+                	<th>Jeudi</th>
+                	<th>Vendredi</th>
+            	</tr>
+        	</thead>
+        	<tbody>
+            	<tr>
+                	<td>8h - 10h</td>
+                	<td><input type="checkbox" id="lundi_8_10" name="horaire" value="lundi_8_10"></td>
+                	<td><input type="checkbox" id="mardi_8_10" name="horaire" value="mardi_8_10"></td>
+                	<td><input type="checkbox" id="mercredi_8_10" name="horaire" value="mercredi_8_10"></td>
+                	<td><input type="checkbox" id="jeudi_8_10" name="horaire" value="jeudi_8_10"></td>
+                	<td><input type="checkbox" id="vendredi_8_10" name="horaire" value="vendredi_8_10"></td>
+            	</tr>
+            	<tr>
+                	<td>10h - 12h</td>
+                	<td><input type="checkbox" id="lundi_10_12" name="horaire" value="lundi_10_12"></td>
+                	<td><input type="checkbox" id="mardi_10_12" name="horaire" value="mardi_10_12"></td>
+                	<td><input type="checkbox" id="mercredi_10_12" name="horaire" value="mercredi_10_12"></td>
+                	<td><input type="checkbox" id="jeudi_10_12" name="horaire" value="jeudi_10_12"></td>
+                	<td><input type="checkbox" id="vendredi_10_12" name="horaire" value="vendredi_10_12"></td>
+            	</tr>
+            	<tr>
+                 	<!-- Pause déjeuner sans case à cocher : -->
+            	<tr>
+                	<td>12h - 13h (déjeuner)</td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+                	<td></td>
+            	</tr>
+            	<tr>
+
+                	<td>13h - 15h</td>
+                	<td><input type="checkbox" id="lundi_13_15" name="horaire" value="lundi_13_15"></td>
+                	<td><input type="checkbox" id="mardi_13_15" name="horaire" value="mardi_13_15"></td>
+                	<td><input type="checkbox" id="mercredi_13_15" name="horaire" value="mercredi_13_15"></td>
+                	<td><input type="checkbox" id="jeudi_13_15" name="horaire" value="jeudi_13_15"></td>
+                	<td><input type="checkbox" id="vendredi_13_15" name="horaire" value="vendredi_13_15"></td>
+            	</tr>
+            	<tr>
+                	<td>15h - 17h</td>
+                	<td><input type="checkbox" id="lundi_15_17" name="horaire" value="lundi_15_17"></td>
+                	<td><input type="checkbox" id="mardi_15_17" name="horaire" value="mardi_15_17"></td>
+                	<td><input type="checkbox" id="mercredi_15_17" name="horaire" value="mercredi_15_17"></td>
+                	<td><input type="checkbox" id="jeudi_15_17" name="horaire" value="jeudi_15_17"></td>
+                	<td><input type="checkbox" id="vendredi_15_17" name="horaire" value="vendredi_15_17"></td>
+            	</tr>
+            	<tr>
+                	<td>17h - 19h</td>
+                	<td><input type="checkbox" id="lundi_17_19" name="horaire" value="lundi_17_19"></td>
+                	<td><input type="checkbox" id="mardi_17_19" name="horaire" value="mardi_17_19"></td>
+                	<td><input type="checkbox" id="mercredi_17_19" name="horaire" value="mercredi_17_19"></td>
+                	<td><input type="checkbox" id="jeudi_17_19" name="horaire" value="jeudi_17_19"></td>
+                	<td><input type="checkbox" id="vendredi_17_19" name="horaire" value="vendredi_17_19"></td>
+            	</tr>
+        	</tbody>
+    	</table>
+    	<br>
+    	<input type="submit" value="Valider les horraires">
+	</div>
+
+<script>
+// Script JavaScript pour afficher les options spécifiques aux professeurs
+document.getElementById('formStatut').addEventListener('submit', function(event) {
+	event.preventDefault(); // Empêcher le formulaire de se soumettre
+
+	var statut = document.getElementById('statut').value;
+
+	// Masquer toutes les sections spécifiques
+	document.querySelectorAll('[id^="options"]').forEach(function(element) {
+    	element.style.display = 'none';
+	});
+
+	// Afficher la section spécifique au statut sélectionné
+	if (statut === 'professeur') {
+    	document.getElementById('optionsProfesseur').style.display = 'block';
+	} else if (statut === 'etudiant') {
+    	document.getElementById('optionsEtudiant').style.display = 'block';
+	}
+});
+
+// Afficher le tableau des horaires une fois que les informations personnelles des professeurs sont validées
+document.getElementById('optionsProfesseur').addEventListener('submit', function(event) {
+	event.preventDefault(); // Empêcher le formulaire de se soumettre
+
+	document.getElementById('tableauHoraires').style.display = 'block';
+});
+
+
+
+
+
+
+	<!-- Script JavaScript pour afficher les options spécifiques aux étudiants -->
+
+    	document.getElementById('formStatut').addEventListener('submit', function(event) {
+        	event.preventDefault(); // Empêcher le formulaire de se soumettre
+
+        	var statut = document.getElementById('statut').value;
+
+        	if (statut === 'etudiant') {
+            	document.getElementById('optionsEtudiant').style.display = 'block';
+        	} else {
+            	document.getElementById('optionsEtudiant').style.display = 'none';
+        	}
+    	});
+
+    	document.getElementById('formUFR').addEventListener('submit', function(event) {
+        	event.preventDefault(); // Empêcher le formulaire de se soumettre
+
+        	var ufr = document.getElementById('ufr').value;
+
+        	// Masquer tous les formulaires de matières
+        	document.querySelectorAll('[id^="matieres"]').forEach(function(element) {
+            	element.style.display = 'none';
+        	});
+
+        	// Afficher le formulaire de matières correspondant à l'UFR sélectionnée
+        	document.getElementById('matieres' + ufr).style.display = 'block';
+    	});
+
+    	document.getElementById('nombreMatieres').addEventListener('change', function(event) {
+        	var nombreMatieres = parseInt(this.value);
+        	var checkboxes = document.querySelectorAll('[id^="matieres"] input[type="checkbox"]');
+
+        	// Réinitialiser toutes les cases à cocher
+        	checkboxes.forEach(function(checkbox) {
+            	checkbox.checked = false;
+        	});
+
+        	// Activer les cases à cocher correspondant au nombre choisi de matières
+        	for (var i = 0; i < nombreMatieres; i++) {
+            	checkboxes[i].disabled = false;
+        	}
+
+        	// Afficher le formulaire de choix des matières
+        	document.getElementById('formMatieres').style.display = 'block';
+    	});
+
+    	document.getElementById('formMatieresChoix').addEventListener('submit', function(event) {
+        	event.preventDefault(); // Empêcher le formulaire de se soumettre
+
+        	// Vous pouvez traiter ici les matières sélectionnées
+        	console.log('Matieres sélectionnées:', Array.from(this.querySelectorAll('input[type="checkbox"]:checked')).map(function(checkbox) {
+            	return checkbox.value;
+        	}));
+
+        	// Afficher le formulaire pour choisir les horaires
+        	document.getElementById('optionsHoraire').style.display = 'block';
+    	});
+
+	</script>
+</body>
+</html>
+
+
+
