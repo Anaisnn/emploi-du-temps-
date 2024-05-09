@@ -1,0 +1,484 @@
+<html>
+<head>
+<title>emploi_du_temps.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+emploi_du_temps.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;fr&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+	<span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;meta </span><span class="s2">name</span><span class="s3">=&quot;viewport&quot; </span><span class="s2">content</span><span class="s3">=&quot;width=device-width, initial-scale=1.0&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;title&gt;</span><span class="s1">Choix des matières pour l'UFR SSA et SEGMI</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez votre statut :</span><span class="s0">&lt;/h2&gt;</span>
+	<span class="s0">&lt;form </span><span class="s2">action</span><span class="s3">=&quot;#&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot; </span><span class="s2">id</span><span class="s3">=&quot;formStatut&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;statut&quot;</span><span class="s0">&gt;</span><span class="s1">Statut :</span><span class="s0">&lt;/label&gt;</span>
+    	<span class="s0">&lt;select </span><span class="s2">name</span><span class="s3">=&quot;statut&quot; </span><span class="s2">id</span><span class="s3">=&quot;statut&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;&quot;</span><span class="s0">&gt;</span><span class="s1">Choisissez votre statut</span><span class="s0">&lt;/option&gt;</span>
+        	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;professeur&quot;</span><span class="s0">&gt;</span><span class="s1">Professeur</span><span class="s0">&lt;/option&gt;</span>
+        	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;etudiant&quot;</span><span class="s0">&gt;</span><span class="s1">Étudiant</span><span class="s0">&lt;/option&gt;</span>
+        	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;particulier&quot;</span><span class="s0">&gt;</span><span class="s1">Particulier</span><span class="s0">&lt;/option&gt;</span>
+    	<span class="s0">&lt;/select&gt;</span>
+    	<span class="s0">&lt;br&gt;&lt;br&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider mon statut&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;/form&gt;</span>
+
+
+	<span class="s4">&lt;!-- Div pour afficher les options spécifiques aux professeurs --&gt;</span>
+	<span class="s4">&lt;!-- Div pour afficher les options spécifiques aux professeurs --&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;optionsProfesseur&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;h2&gt;</span><span class="s1">Informations personnelles :</span><span class="s0">&lt;/h2&gt;</span>
+	<span class="s0">&lt;form </span><span class="s2">action</span><span class="s3">=&quot;#&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot; </span><span class="s2">id</span><span class="s3">=&quot;formProfesseur&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;nom&quot;</span><span class="s0">&gt;</span><span class="s1">Nom :</span><span class="s0">&lt;/label&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;nom&quot; </span><span class="s2">name</span><span class="s3">=&quot;nom&quot;</span><span class="s0">&gt;&lt;br&gt;&lt;br&gt;</span>
+    	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;numero_universite&quot;</span><span class="s0">&gt;</span><span class="s1">Numéro rattaché à l'université :</span><span class="s0">&lt;/label&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;numero_universite&quot; </span><span class="s2">name</span><span class="s3">=&quot;numero_universite&quot;</span><span class="s0">&gt;&lt;br&gt;&lt;br&gt;</span>
+    	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;heures_cours&quot;</span><span class="s0">&gt;</span><span class="s1">Combien d'heures de cours souhaitez-vous donner par semaine ?</span><span class="s0">&lt;/label&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;heures_cours&quot; </span><span class="s2">name</span><span class="s3">=&quot;heures_cours&quot; </span><span class="s2">min</span><span class="s3">=&quot;1&quot; </span><span class="s2">max</span><span class="s3">=&quot;35&quot;</span><span class="s0">&gt;&lt;br&gt;&lt;br&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider&quot;</span><span class="s0">&gt;</span>
+
+
+	<span class="s0">&lt;/form&gt;</span>
+	<span class="s4">&lt;!-- Ajout du tableau pour choisir les horaires --&gt;</span>
+	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;tableauHoraires&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez vos jours et vos heures de cours :</span><span class="s0">&lt;/h2&gt;</span>
+    	<span class="s0">&lt;table </span><span class="s2">border</span><span class="s3">=&quot;1&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;thead&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;th&gt;&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Lundi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Mardi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Mercredi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Jeudi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Vendredi</span><span class="s0">&lt;/th&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+        	<span class="s0">&lt;/thead&gt;</span>
+        	<span class="s0">&lt;tbody&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">8h - 10h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;prof_lundi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;prof_horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;prof_mardi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;prof_horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;prof_mercredi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;prof_horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;prof_jeudi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;prof_horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;prof_vendredi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;prof_horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+
+                	<span class="s0">&lt;td&gt;</span><span class="s1">10h - 12h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">12h - 13h (déjeuner)</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+
+                	<span class="s0">&lt;td&gt;</span><span class="s1">13h - 15h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">15h - 17h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">17h - 19h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt; </span><span class="s4">&lt;!-- Ajoutez d'autres lignes pour les autres tranches horaires --&gt;</span>
+        	<span class="s0">&lt;/tbody&gt;</span>
+    	<span class="s0">&lt;/table&gt;</span>
+    	<span class="s0">&lt;br&gt;&lt;br&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les horaires&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+
+
+
+
+
+	<span class="s4">&lt;!-- Div pour afficher les options spécifiques aux étudiants --&gt;</span>
+	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;optionsEtudiant&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez votre UFR :</span><span class="s0">&lt;/h2&gt;</span>
+    	<span class="s0">&lt;form </span><span class="s2">action</span><span class="s3">=&quot;#&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot; </span><span class="s2">id</span><span class="s3">=&quot;formUFR&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;ufr&quot;</span><span class="s0">&gt;</span><span class="s1">UFR :</span><span class="s0">&lt;/label&gt;</span>
+        	<span class="s0">&lt;select </span><span class="s2">name</span><span class="s3">=&quot;ufr&quot; </span><span class="s2">id</span><span class="s3">=&quot;ufr&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;&quot;</span><span class="s0">&gt;</span><span class="s1">Choisissez votre UFR</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;LCE&quot;</span><span class="s0">&gt;</span><span class="s1">LCE</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;PHILIA&quot;</span><span class="s0">&gt;</span><span class="s1">PHILIA</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;SSA&quot;</span><span class="s0">&gt;</span><span class="s1">SSA</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;SEGMI&quot;</span><span class="s0">&gt;</span><span class="s1">SEGMI</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;SITEC&quot;</span><span class="s0">&gt;</span><span class="s1">SITEC</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;SPSE&quot;</span><span class="s0">&gt;</span><span class="s1">SPSE</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;DSP&quot;</span><span class="s0">&gt;</span><span class="s1">DSP</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;STAPS&quot;</span><span class="s0">&gt;</span><span class="s1">STAPS</span><span class="s0">&lt;/option&gt;</span>
+        	<span class="s0">&lt;/select&gt;</span>
+        	<span class="s0">&lt;br&gt;&lt;br&gt;</span>
+        	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez votre niveau :</span><span class="s0">&lt;/h2&gt;</span>
+        	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;niveau&quot;</span><span class="s0">&gt;</span><span class="s1">Niveau :</span><span class="s0">&lt;/label&gt;</span>
+        	<span class="s0">&lt;select </span><span class="s2">name</span><span class="s3">=&quot;niveau&quot; </span><span class="s2">id</span><span class="s3">=&quot;niveau&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;&quot;</span><span class="s0">&gt;</span><span class="s1">Choisissez votre niveau</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;L1&quot;</span><span class="s0">&gt;</span><span class="s1">L1</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;L2&quot;</span><span class="s0">&gt;</span><span class="s1">L2</span><span class="s0">&lt;/option&gt;</span>
+            	<span class="s0">&lt;option </span><span class="s2">value</span><span class="s3">=&quot;L3&quot;</span><span class="s0">&gt;</span><span class="s1">L3</span><span class="s0">&lt;/option&gt;</span>
+        	<span class="s0">&lt;/select&gt;</span>
+        	<span class="s0">&lt;br&gt;&lt;br&gt;</span>
+        	<span class="s0">&lt;h2&gt;</span><span class="s1">Combien de matières souhaitez-vous avoir ? (entre 3 et 8) :</span><span class="s0">&lt;/h2&gt;</span>
+        	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;nombreMatieres&quot; </span><span class="s2">name</span><span class="s3">=&quot;nombreMatieres&quot; </span><span class="s2">min</span><span class="s3">=&quot;3&quot; </span><span class="s2">max</span><span class="s3">=&quot;8&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;br&gt;&lt;br&gt;</span>
+        	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;/form&gt;</span>
+	<span class="s0">&lt;/div&gt;</span>
+
+	<span class="s4">&lt;!-- Div pour afficher le choix des matières --&gt;</span>
+	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;formMatieres&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez vos matières :</span><span class="s0">&lt;/h2&gt;</span>
+    	<span class="s0">&lt;form </span><span class="s2">action</span><span class="s3">=&quot;#&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot; </span><span class="s2">id</span><span class="s3">=&quot;formMatieresChoix&quot;</span><span class="s0">&gt;</span>
+        	<span class="s4">&lt;!-- Les matières pour l'UFR SSA --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresSSA&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR SSA --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;anthropologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;anthropologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;anthropologie&quot;</span><span class="s0">&gt;</span><span class="s1">Anthropologie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;geographie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;geographie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;geographie&quot;</span><span class="s0">&gt;</span><span class="s1">Géographie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;histoire&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;histoire&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;histoire&quot;</span><span class="s0">&gt;</span><span class="s1">Histoire</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;histoire_art_archeologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;histoire_art_archeologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;histoire_art_archeologie&quot;</span><span class="s0">&gt;</span><span class="s1">Histoire de l'art / Archéologie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sociologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sociologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sociologie&quot;</span><span class="s0">&gt;</span><span class="s1">Sociologie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR SEGMI --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresSEGMI&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR SEGMI --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;economie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;economie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;economie&quot;</span><span class="s0">&gt;</span><span class="s1">Économie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mathematiques&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;mathematiques&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;mathematiques&quot;</span><span class="s0">&gt;</span><span class="s1">Mathématiques</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sciences_gestion&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sciences_gestion&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sciences_gestion&quot;</span><span class="s0">&gt;</span><span class="s1">Sciences de Gestion</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;informatique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;informatique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;informatique&quot;</span><span class="s0">&gt;</span><span class="s1">Informatique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR DSP --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresDSP&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR DSP --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;droit_prive&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;droit_prive&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;droit_prive&quot;</span><span class="s0">&gt;</span><span class="s1">Droit privé</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;droit_public&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;droit_public&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;droit_public&quot;</span><span class="s0">&gt;</span><span class="s1">Droit public</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;histoire_droit&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;histoire_droit&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;histoire_droit&quot;</span><span class="s0">&gt;</span><span class="s1">Histoire du droit</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;science_politique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;science_politique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;science_politique&quot;</span><span class="s0">&gt;</span><span class="s1">Science politique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR SPSE --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresSPSE&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR SPSE --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychologie_cognitive&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychologie_cognitive&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychologie_cognitive&quot;</span><span class="s0">&gt;</span><span class="s1">Psychologie cognitive</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychologie_developpement&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychologie_developpement&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychologie_developpement&quot;</span><span class="s0">&gt;</span><span class="s1">Psychologie du développement</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychologie_travail&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychologie_travail&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychologie_travail&quot;</span><span class="s0">&gt;</span><span class="s1">Psychologie du travail</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychopathologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychopathologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychopathologie&quot;</span><span class="s0">&gt;</span><span class="s1">Psychopathologie et Psychologie Clinique empirique et TCC</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychopathologie_clinique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychopathologie_clinique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychopathologie_clinique&quot;</span><span class="s0">&gt;</span><span class="s1">Psychopathologie clinique psychanalytique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychologie_sociale&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychologie_sociale&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychologie_sociale&quot;</span><span class="s0">&gt;</span><span class="s1">Psychologie sociale</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;psychophysiologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;psychophysiologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;psychophysiologie&quot;</span><span class="s0">&gt;</span><span class="s1">Psychophysiologie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;anglais&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;anglais&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;anglais&quot;</span><span class="s0">&gt;</span><span class="s1">Anglais</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mathematiques&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;mathematiques&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;mathematiques&quot;</span><span class="s0">&gt;</span><span class="s1">Mathématiques</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR LCE --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresLCE&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR LCE --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;allemand&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;allemand&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;allemand&quot;</span><span class="s0">&gt;</span><span class="s1">Allemand</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;italien&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;italien&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;italien&quot;</span><span class="s0">&gt;</span><span class="s1">Italien</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;portugais&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;portugais&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;portugais&quot;</span><span class="s0">&gt;</span><span class="s1">Portugais</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;slaves&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;slaves&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;slaves&quot;</span><span class="s0">&gt;</span><span class="s1">Slaves</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;anglais_lce&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;anglais_lce&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;anglais_lce&quot;</span><span class="s0">&gt;</span><span class="s1">Anglais</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;espagnol&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;espagnol&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;espagnol&quot;</span><span class="s0">&gt;</span><span class="s1">Espagnol</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lea&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;lea&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;lea&quot;</span><span class="s0">&gt;</span><span class="s1">Langues étrangères appliquées (LEA)</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR PHILIA --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresPHILIA&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR PHILIA --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;arts_spectacle&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;arts_spectacle&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;arts_spectacle&quot;</span><span class="s0">&gt;</span><span class="s1">Arts du spectacle</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;langues_litteratures_grecques_latines&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;langues_litteratures_grecques_latines&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;langues_litteratures_grecques_latines&quot;</span><span class="s0">&gt;</span><span class="s1">Langues et littératures grecques et latines</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lettres_modernes&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;lettres_modernes&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;lettres_modernes&quot;</span><span class="s0">&gt;</span><span class="s1">Lettres modernes</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;philosophie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;philosophie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;philosophie&quot;</span><span class="s0">&gt;</span><span class="s1">Philosophie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sciences_information_communication&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sciences_information_communication&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sciences_information_communication&quot;</span><span class="s0">&gt;</span><span class="s1">Sciences de l'information et de la communication</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sciences_langage&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sciences_langage&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sciences_langage&quot;</span><span class="s0">&gt;</span><span class="s1">Sciences du langage</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;fete&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;fete&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;fete&quot;</span><span class="s0">&gt;</span><span class="s1">FETE (Français pour étudiants étrangers)</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+
+        	<span class="s4">&lt;!-- Les matières pour l'UFR SITEC --&gt;</span>
+        	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matieresSITEC&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+            	<span class="s4">&lt;!-- Les matières spécifiques à l'UFR SITEC --&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;anglais_sitec&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;anglais_sitec&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;anglais_sitec&quot;</span><span class="s0">&gt;</span><span class="s1">Anglais</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;electronique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;electronique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;electronique&quot;</span><span class="s0">&gt;</span><span class="s1">Électronique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;energetique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;energetique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;energetique&quot;</span><span class="s0">&gt;</span><span class="s1">Énergétique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;science_information_communication&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;science_information_communication&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;science_information_communication&quot;</span><span class="s0">&gt;</span><span class="s1">Science de l'information et de la communication</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mecanique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;mecanique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;mecanique&quot;</span><span class="s0">&gt;</span><span class="s1">Mécanique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;traitement_signal&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;traitement_signal&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;traitement_signal&quot;</span><span class="s0">&gt;</span><span class="s1">Traitement du signal</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mathematiques_sitec&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;mathematiques_sitec&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;mathematiques_sitec&quot;</span><span class="s0">&gt;</span><span class="s1">Mathématiques</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;thermique_energetique&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;thermique_energetique&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;thermique_energetique&quot;</span><span class="s0">&gt;</span><span class="s1">Thermique-Énergétique</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sociologie_demographie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sociologie_demographie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sociologie_demographie&quot;</span><span class="s0">&gt;</span><span class="s1">Sociologie et démographie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;sociologie&quot; </span><span class="s2">name</span><span class="s3">=&quot;matieres&quot; </span><span class="s2">value</span><span class="s3">=&quot;sociologie&quot;</span><span class="s0">&gt;</span>
+            	<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;sociologie&quot;</span><span class="s0">&gt;</span><span class="s1">Sociologie</span><span class="s0">&lt;/label&gt;&lt;br&gt;</span>
+            	<span class="s0">&lt;br&gt;</span>
+            	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les matières&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;/div&gt;</span>
+    	<span class="s0">&lt;/form&gt;</span>
+	<span class="s0">&lt;/div&gt;</span>
+
+	<span class="s4">&lt;!-- Div pour afficher les options d'horaire --&gt;</span>
+	<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;optionsHoraire&quot; </span><span class="s2">style</span><span class="s3">=&quot;display: none;&quot;</span><span class="s0">&gt;</span>
+    	<span class="s0">&lt;h2&gt;</span><span class="s1">Choisissez vos jours et vos heures de cours :</span><span class="s0">&lt;/h2&gt;</span>
+    	<span class="s0">&lt;table </span><span class="s2">border</span><span class="s3">=&quot;1&quot;</span><span class="s0">&gt;</span>
+        	<span class="s0">&lt;thead&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;th&gt;&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Lundi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Mardi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Mercredi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Jeudi</span><span class="s0">&lt;/th&gt;</span>
+                	<span class="s0">&lt;th&gt;</span><span class="s1">Vendredi</span><span class="s0">&lt;/th&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+        	<span class="s0">&lt;/thead&gt;</span>
+        	<span class="s0">&lt;tbody&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">8h - 10h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_8_10&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_8_10&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">10h - 12h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_10_12&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_10_12&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                 	<span class="s4">&lt;!-- Pause déjeuner sans case à cocher : --&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">12h - 13h (déjeuner)</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+
+                	<span class="s0">&lt;td&gt;</span><span class="s1">13h - 15h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_13_15&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_13_15&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">15h - 17h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_15_17&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_15_17&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+            	<span class="s0">&lt;tr&gt;</span>
+                	<span class="s0">&lt;td&gt;</span><span class="s1">17h - 19h</span><span class="s0">&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;lundi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;lundi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mardi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mardi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;mercredi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;mercredi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;jeudi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;jeudi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+                	<span class="s0">&lt;td&gt;&lt;input </span><span class="s2">type</span><span class="s3">=&quot;checkbox&quot; </span><span class="s2">id</span><span class="s3">=&quot;vendredi_17_19&quot; </span><span class="s2">name</span><span class="s3">=&quot;horaire&quot; </span><span class="s2">value</span><span class="s3">=&quot;vendredi_17_19&quot;</span><span class="s0">&gt;&lt;/td&gt;</span>
+            	<span class="s0">&lt;/tr&gt;</span>
+        	<span class="s0">&lt;/tbody&gt;</span>
+    	<span class="s0">&lt;/table&gt;</span>
+    	<span class="s0">&lt;br&gt;</span>
+    	<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;submit&quot; </span><span class="s2">value</span><span class="s3">=&quot;Valider les horraires&quot;</span><span class="s0">&gt;</span>
+	<span class="s0">&lt;/div&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+<span class="s1">// Script JavaScript pour afficher les options spécifiques aux professeurs</span>
+<span class="s1">document.getElementById('formStatut').addEventListener('submit', function(event) {</span>
+	<span class="s1">event.preventDefault(); // Empêcher le formulaire de se soumettre</span>
+
+	<span class="s1">var statut = document.getElementById('statut').value;</span>
+
+	<span class="s1">// Masquer toutes les sections spécifiques</span>
+	<span class="s1">document.querySelectorAll('[id^=&quot;options&quot;]').forEach(function(element) {</span>
+    	<span class="s1">element.style.display = 'none';</span>
+	<span class="s1">});</span>
+
+	<span class="s1">// Afficher la section spécifique au statut sélectionné</span>
+	<span class="s1">if (statut === 'professeur') {</span>
+    	<span class="s1">document.getElementById('optionsProfesseur').style.display = 'block';</span>
+	<span class="s1">} else if (statut === 'etudiant') {</span>
+    	<span class="s1">document.getElementById('optionsEtudiant').style.display = 'block';</span>
+	<span class="s1">}</span>
+<span class="s1">});</span>
+
+<span class="s1">// Afficher le tableau des horaires une fois que les informations personnelles des professeurs sont validées</span>
+<span class="s1">document.getElementById('optionsProfesseur').addEventListener('submit', function(event) {</span>
+	<span class="s1">event.preventDefault(); // Empêcher le formulaire de se soumettre</span>
+
+	<span class="s1">document.getElementById('tableauHoraires').style.display = 'block';</span>
+<span class="s1">});</span>
+
+
+
+
+
+
+	<span class="s1">&lt;!-- Script JavaScript pour afficher les options spécifiques aux étudiants --&gt;</span>
+
+    	<span class="s1">document.getElementById('formStatut').addEventListener('submit', function(event) {</span>
+        	<span class="s1">event.preventDefault(); // Empêcher le formulaire de se soumettre</span>
+
+        	<span class="s1">var statut = document.getElementById('statut').value;</span>
+
+        	<span class="s1">if (statut === 'etudiant') {</span>
+            	<span class="s1">document.getElementById('optionsEtudiant').style.display = 'block';</span>
+        	<span class="s1">} else {</span>
+            	<span class="s1">document.getElementById('optionsEtudiant').style.display = 'none';</span>
+        	<span class="s1">}</span>
+    	<span class="s1">});</span>
+
+    	<span class="s1">document.getElementById('formUFR').addEventListener('submit', function(event) {</span>
+        	<span class="s1">event.preventDefault(); // Empêcher le formulaire de se soumettre</span>
+
+        	<span class="s1">var ufr = document.getElementById('ufr').value;</span>
+
+        	<span class="s1">// Masquer tous les formulaires de matières</span>
+        	<span class="s1">document.querySelectorAll('[id^=&quot;matieres&quot;]').forEach(function(element) {</span>
+            	<span class="s1">element.style.display = 'none';</span>
+        	<span class="s1">});</span>
+
+        	<span class="s1">// Afficher le formulaire de matières correspondant à l'UFR sélectionnée</span>
+        	<span class="s1">document.getElementById('matieres' + ufr).style.display = 'block';</span>
+    	<span class="s1">});</span>
+
+    	<span class="s1">document.getElementById('nombreMatieres').addEventListener('change', function(event) {</span>
+        	<span class="s1">var nombreMatieres = parseInt(this.value);</span>
+        	<span class="s1">var checkboxes = document.querySelectorAll('[id^=&quot;matieres&quot;] input[type=&quot;checkbox&quot;]');</span>
+
+        	<span class="s1">// Réinitialiser toutes les cases à cocher</span>
+        	<span class="s1">checkboxes.forEach(function(checkbox) {</span>
+            	<span class="s1">checkbox.checked = false;</span>
+        	<span class="s1">});</span>
+
+        	<span class="s1">// Activer les cases à cocher correspondant au nombre choisi de matières</span>
+        	<span class="s1">for (var i = 0; i &lt; nombreMatieres; i++) {</span>
+            	<span class="s1">checkboxes[i].disabled = false;</span>
+        	<span class="s1">}</span>
+
+        	<span class="s1">// Afficher le formulaire de choix des matières</span>
+        	<span class="s1">document.getElementById('formMatieres').style.display = 'block';</span>
+    	<span class="s1">});</span>
+
+    	<span class="s1">document.getElementById('formMatieresChoix').addEventListener('submit', function(event) {</span>
+        	<span class="s1">event.preventDefault(); // Empêcher le formulaire de se soumettre</span>
+
+        	<span class="s1">// Vous pouvez traiter ici les matières sélectionnées</span>
+        	<span class="s1">console.log('Matieres sélectionnées:', Array.from(this.querySelectorAll('input[type=&quot;checkbox&quot;]:checked')).map(function(checkbox) {</span>
+            	<span class="s1">return checkbox.value;</span>
+        	<span class="s1">}));</span>
+
+        	<span class="s1">// Afficher le formulaire pour choisir les horaires</span>
+        	<span class="s1">document.getElementById('optionsHoraire').style.display = 'block';</span>
+    	<span class="s1">});</span>
+
+	<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+
+
+
+</pre>
+</body>
+</html>
